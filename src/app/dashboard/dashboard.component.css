@@ -1,0 +1,9 @@
+input{
+    background-color: #4a4a4a !important;
+    border: none !important;
+    box-shadow:none !important ;
+}
+
+div,form{
+    background-color: #282828 !important;
+}

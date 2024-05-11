@@ -1,0 +1,54 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-6 mt-5">            
+            <div class="card text-center">
+                <button mat-stroked-button color="primary" (click)="logout()">LOGOUT</button>
+                <div class="form-floating mb-3 text-center">
+                    <h5 class="text-center text-warning">Add House</h5>
+                </div>
+                    <div class="form-floating mb-3">
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>City</mat-label>
+                            <input matInput type="text" class="form-control" id="city" name="city" [(ngModel)]="city">
+                        </mat-form-field>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Street</mat-label>
+                            <input matInput  type="text" class="form-control" id="street" name="street" [(ngModel)]="street">
+                        </mat-form-field>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Address</mat-label>
+                            <input matInput type="text" class="form-control" id="address" name="address" [(ngModel)]="address">
+                        </mat-form-field>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Size</mat-label>
+                            <input matInput type="number" class="form-control" id="size" name="size" [(ngModel)]="size">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Rooms</mat-label>
+                            <input matInput type="text" class="form-control" id="rooms" name="rooms" [(ngModel)]="rooms">
+                        </mat-form-field>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Price</mat-label>
+                            <input matInput type="text" class="form-control" id="price" name="price" [(ngModel)]="price">
+                        </mat-form-field>
+                    </div>
+                    <button mat-stroked-button color="primary" type="button" (click)="addHouse()">ADD HOUSE</button>
+            </div>
+        </div>
+        <app-list-datas class="col-md-6 mt-5" [testoutput] = "houseList" [userObject] = "userObject" [houseObject]="houseObject"></app-list-datas>
+        
+    </div>
+</div>

@@ -1,0 +1,43 @@
+    <h5 class="text-danger"> House List</h5>
+    <div class="card ">
+      
+        <button (click)="searchCityMethod()" mat-stroked-button color="primary" >Filter by city</button>
+          <mat-form-field class="example-full-width">
+            <input matInput type="text" id="search" name="search" [(ngModel)]="searchCity">
+          </mat-form-field>
+          <mat-card>
+            <mat-card-content>
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Owner</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Street</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Check it out</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let houseObject of testoutput">
+                    <td >{{houseObject.owner.name}}</td>
+                    <td >{{houseObject.location.city}}</td>
+                    <td>{{houseObject.location.street}}</td>
+                    <td>{{houseObject.location.address}}</td>
+                    <td>{{houseObject.features.size | squareMeter }}</td>
+                    <td>{{houseObject.price}}</td>
+                    <td>
+                        <button mat-stroked-button color="primary" (click)="deleteHouse(houseObject)">Delete</button>
+                    </td>
+                    <td>
+                      <button mat-stroked-button color="primary" (click)="goToHousePage(houseObject)">Check it out</button>
+
+                  </td>
+                  </tr>
+                </tbody>
+            </table>
+          </mat-card-content>
+        </mat-card>
+    </div>

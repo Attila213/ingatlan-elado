@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ingatlan-kereso-elado": {
+      "hosting": {
+        "ingatlan": [
+          "ingatlan-kereso-elado"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ingatlan-kereso-elado"
+  }
+}

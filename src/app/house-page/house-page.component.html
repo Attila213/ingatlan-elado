@@ -1,0 +1,46 @@
+<div class="container mt-5">
+    <h1 class="mb-3">House Details</h1>
+    <!-- <div id="houseImagesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item" *ngFor="let image of houseObject.images; let isFirst = first" [class.active]="isFirst">
+          <img [src]="image" class="d-block w-100" alt="House image">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#houseImagesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#houseImagesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div> -->
+    
+    <div *ngIf="isOwner">
+        <input type="file" (change)="onFileSelected($event)">
+    <button (click)="uploadFile()">Upload</button>
+    </div>
+    <div class="card mt-3">
+      <div class="card-body">
+        <h2 class="card-title">Owner Information</h2>
+        <p><strong>Name:</strong> {{ houseObject.owner.name }}</p>
+        <p><strong>Email:</strong> {{ houseObject.owner.email }}</p>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="card-body">
+        <h2 class="card-title">House Features</h2>
+        <p><strong>Size:</strong> {{ houseObject.features.size }} sqm</p>
+        <p><strong>Rooms:</strong> {{ houseObject.features.rooms }}</p>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="card-body">
+        <h2 class="card-title">Location</h2>
+        <p><strong>Address:</strong> {{ houseObject.location.address }}</p>
+        <p><strong>City:</strong> {{ houseObject.location.city }}</p>
+        <p><strong>Street:</strong> {{ houseObject.location.street }}</p>
+      </div>
+    </div>
+  </div>
+  
